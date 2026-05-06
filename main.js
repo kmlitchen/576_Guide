@@ -128,7 +128,7 @@
             url: "https://kmlitchen.github.io/576_Guide/data/music.png"
         }
         },{
-        value: "MUS",
+        value: "MEM",
         symbol: {
             type: "picture-marker",
             url: "https://kmlitchen.github.io/576_Guide/data/museum.png"
