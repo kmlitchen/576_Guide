@@ -67,31 +67,31 @@
     });
     view.ui.add(locate, "bottom-left") // set locate button location
 
-//**Incident Survey Feature Layer:
-    // pop-up for survey results -> contains link to edit the details:
-    const popup_Survey = {
-    "title": "Incident Details:",
-    "content": "<b>Date and Time:</b> {note_the_date_and_time_of_the_i}<br> <b>Description:</b> {incident_details} <br> <a href=https://survey123.arcgis.com/share/39d43140fb4a474fb9292e828b60c619?mode=edit&globalId={globalid}&version=latest><b>Edit Response</b></a>"
-    };    
+// //**Incident Survey Feature Layer:
+//     // pop-up for survey results -> contains link to edit the details:
+//     const popup_Survey = {
+//     "title": "Incident Details:",
+//     "content": "<b>Date and Time:</b> {note_the_date_and_time_of_the_i}<br> <b>Description:</b> {incident_details} <br> <a href=https://survey123.arcgis.com/share/39d43140fb4a474fb9292e828b60c619?mode=edit&globalId={globalid}&version=latest><b>Edit Response</b></a>"
+//     };    
     
-    // renderer for incident style icon: 
-    const surveyRenderer = {
-    type: "simple",
-    symbol: {
-        type: "picture-marker",
-        url: "https://kmlitchen.github.io/576_Park_Atlas/data/exclamation.png", 
-        width: "14px",
-        height: "14px"
-        }
-    }
+//     // renderer for incident style icon: 
+//     const surveyRenderer = {
+//     type: "simple",
+//     symbol: {
+//         type: "picture-marker",
+//         url: "https://kmlitchen.github.io/576_Park_Atlas/data/exclamation.png", 
+//         width: "14px",
+//         height: "14px"
+//         }
+//     }
 
-    // feature layer for survey results:
-    const surveyLayer = new FeatureLayer({
-        url: "https://services.arcgis.com/HRPe58bUyBqyyiCt/arcgis/rest/services/survey123_39d43140fb4a474fb9292e828b60c619_results/FeatureServer",
-        popupTemplate: popup_Survey,
-        title: "Incident Report", // wanted this to show up instead of the survey 123 text in the editor but idk
-        renderer: surveyRenderer
-    }); map.add(surveyLayer); // add feature layer to map
+//     // feature layer for survey results:
+//     const surveyLayer = new FeatureLayer({
+//         url: "https://services.arcgis.com/HRPe58bUyBqyyiCt/arcgis/rest/services/survey123_39d43140fb4a474fb9292e828b60c619_results/FeatureServer",
+//         popupTemplate: popup_Survey,
+//         title: "Incident Report", // wanted this to show up instead of the survey 123 text in the editor but idk
+//         renderer: surveyRenderer
+//     }); map.add(surveyLayer); // add feature layer to map
 
 
 //**Venue Feature Layer Elements:
@@ -107,38 +107,38 @@
       field: "Venue_Class",
        defaultSymbol: { 
          type: "picture-marker",
-         url: "https://pinhead.ink/v23/barn.svg",
+         url: "https://kmlitchen.github.io/576_Guide/data/event.png",
          },
       uniqueValueInfos: [{
         value: "FMKT",
         symbol: {
             type: "picture-marker",
-            url: "https://kmlitchen.github.io/576_Park_Atlas/data/barn.png"
+            url: "https://kmlitchen.github.io/576_Guide/data/barn.png"
         }
-        // },{
-        // value: "ARTS",
-        // symbol: {
-        //     type: "simple-fill",
-        //     color: "#31a354"
-        // }
-        // },{
-        // value: "MUSIC",
-        // symbol: {
-        //     type: "simple-fill",
-        //     color: "#74c476"
-        // }
-        // },{
-        // value: "MUS",
-        // symbol: {
-        //     type: "simple-fill",
-        //     color: "#a1d99b"
-        // }
-        // },{
-        // value: "OUT",
-        // symbol: {
-        //     type: "simple-fill",
-        //     color: "#c7e9c0",
-        // }
+        },{
+        value: "ARTS",
+        symbol: {
+            type: "picture-marker",
+            url: "https://kmlitchen.github.io/576_Guide/data/theater.png"
+        }
+        },{
+        value: "MUSIC",
+        symbol: {
+            type: "picture-marker",
+            url: "https://kmlitchen.github.io/576_Guide/data/music.png"
+        }
+        },{
+        value: "MUS",
+        symbol: {
+            type: "picture-marker",
+            url: "https://kmlitchen.github.io/576_Guide/data/museum.png"
+        }
+        },{
+        value: "OUT",
+        symbol: {
+            type: "picture-marker",
+            url: "https://kmlitchen.github.io/576_Guide/data/park.png"
+        }
         }]
       };
 
@@ -154,7 +154,7 @@
     // legend constructor:
     const myLegend = new Legend ({
       view: view,
-      layerInfos: [{layer: venueLayer},{layer: surveyLayer}],
+      layerInfos: [{layer: venueLayer}]//,{layer: surveyLayer}],
     });
     // put legend in expandable widget:
     const legendExpand = new Expand ({
@@ -168,7 +168,7 @@
     // editor constructor:
     const editor = new Editor({
       view: view,
-      layerInfos: [{layer: venueLayer},{layer: surveyLayer}],
+      layerInfos: [{layer: venueLayer}]//,{layer: surveyLayer}],
     });
 
     // expand widget for editor:
