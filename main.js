@@ -113,7 +113,7 @@
         value: "FMKT",
         symbol: {
             type: "picture-marker",
-            url: "https://kmlitchen.github.io/576_Guide/data/barn.png"
+            url: "https://kmlitchen.github.io/576_Guide/data/basket.png"
         }
         },{
         value: "ARTS",
@@ -137,7 +137,7 @@
         value: "OUT",
         symbol: {
             type: "picture-marker",
-            url: "https://kmlitchen.github.io/576_Guide/data/park.png"
+            url: "https://kmlitchen.github.io/576_Guide/data/tree.png"
         }
         }]
       };
