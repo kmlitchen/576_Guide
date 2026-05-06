@@ -1,12 +1,11 @@
-# GEOG 576 Midterm Project - 
+# GEOG 576 Final Project - 
 
-Park Atlas Description:
-- Includes WI parks and forests ranging from national to local level
-- Users can update features to indicate parks they have visited as well as to rate and leave reviews
-- Users can also add and edit incident reports with spatial and temporal tags
+Entertainment Guide Description:
+- Includes various venues for events and entertainment in MSN. I manually populated farmers' markets, performing arts, music, museum, and outdoor event locations 
+- Users can create, read, update, and delete features
 
-Project Objective Description:
-- For your Midterm Project, you are asked to submit a web application using Esri.js.
-- The application should have a responsive front-end design for mobile and desktop web browsers and a backend based on ArcGIS Online.
-- The full stack should allow users to query, write, and update the database.
-- You aim to provide an intuitive user interface that allows users to interact with the data easily.
+- I couldn't get the AWS stack to communicate w/ the db for the original plan to follow unit 2 modules
+- Then I tried to use an esri leaflet plugin to load a feature layer from agol into the leaflet map I'd already made and they wouldn't render
+- So now we have an esri stack that mirrors unit 1 and has basic CRUD features that best matches the proposal :/
+
+
